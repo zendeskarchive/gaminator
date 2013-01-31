@@ -34,8 +34,13 @@ interface:
 
 * x - the x position of the object
 * y - the y position of the object
-* char - the text representation of the object
+* char (optional) - the text representation of the object
 * color (optional) - the color of the object
+* texture (optional) - an array of string representing a row in a bigger shape
+* colors (optional) - an array of arrays (rows) of Curses color constants,
+  the texture will be colored accordingly
+
+You have to define either char or texture method on each object.
 
 ## Installation
 
