@@ -46,15 +46,18 @@ You have to define either char or texture method on each object.
 
 Add this line to your application's Gemfile:
 
-    gem 'gaminator'
+    gem "gaminator", :git => "git://github.com/futuresimple/gaminator.git"
 
-And then execute:
+Execute:
 
     $ bundle
 
-Or install it yourself as:
+And put following lines on top of your script file:
 
-    $ gem install gaminator
+    require "bundler/setup"
+    require "gaminator"
+
+
 
 ## Contributing
 
