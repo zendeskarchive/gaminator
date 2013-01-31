@@ -6,11 +6,11 @@ require 'gaminator/version'
 Gem::Specification.new do |gem|
   gem.name          = "gaminator"
   gem.version       = Gaminator::VERSION
-  gem.authors       = ["Tomasz Werbicki"]
-  gem.email         = ["tomasz@werbicki.net"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.authors       = ["Tomasz Werbicki", "Pawel Obrok"]
+  gem.email         = ["tomasz@werbicki.net", "pawel.obrok@gmail.com"]
+  gem.description   = "A simple wrapper around Curses for writing ASCII-art games"
+  gem.summary       = "See https://github.com/futuresimple/gaminator/blob/master/README.md"
+  gem.homepage      = "https://github.com/futuresimple/gaminator"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
