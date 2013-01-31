@@ -5,7 +5,16 @@ A simple wrapper around Curses intended for writing ASCII games
 ## Usage
 
 The Gaminator::Runner class implements the base methods used to
-run the game, the event loop being the most important.
+run the game, the event loop being the most important. Initialize
+it like so:
+
+```
+# If you want the game to fill the whole screen
+Gaminator::Runner.new(SkiGame).run
+
+# If you want the game to have a set size (in rows/cols)
+Gaminator::Runner.new(SkiGame, :rows => 30, :cols => 80).run
+```
 
 The Game that is run by the GameRunner has to implement the
 following methods:

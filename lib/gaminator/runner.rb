@@ -6,7 +6,11 @@ module Gaminator
   class Runner
     include Curses
 
-    def initialize(game_class)
+    def initialize(game_class, options = {})
+      if options[:rows] && options[:cols]
+        resizeterm(options[:rows], options[:cols])
+      end
+
       init_screen
       start_color
       cbreak
