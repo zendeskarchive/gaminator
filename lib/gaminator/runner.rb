@@ -2,25 +2,6 @@
 
 require "curses"
 
-# The Gaminator::Runner class implements the base methods used to
-# run the game, the event loop being the most important.
-#
-# The Game that is run by the GameRunner has to implement the
-# following methods:
-# * objects - the array of objects that are displayed on the screen
-# * input_map - the mapping between the keyboard keys and game actions
-# * tick - the method that is called for every loop cycle
-# * exit_message - the message displayed when the game is finished
-# * textbox_content - the message displayed at the bottom of the game window
-# * wait? - determine whether to wait for input before next tick
-# * sleep_time - the time interval beteen two event loop cycles
-#
-# The objects that are displayed on the screen have to implement the following
-# interface:
-# * x - the x position of the object
-# * y - the y position of the object
-# * char - the text representation of the object
-# * color (optional) - the color of the object
 module Gaminator
   class Runner
     include Curses
@@ -79,6 +60,7 @@ module Gaminator
         close_screen
         puts
         puts @game.exit_message
+        puts
       end
     end
 
