@@ -42,6 +42,18 @@ interface:
 
 You have to define either char or texture method on each object.
 
+Available colors:
+
+```
+Curses::COLOR_WHITE
+Curses::COLOR_RED
+Curses::COLOR_BLUE
+Curses::COLOR_GREEN
+Curses::COLOR_CYAN
+Curses::COLOR_MAGENTA
+Curses::COLOR_YELLOW
+```
+
 ## Installation
 
 Add this line to your application's Gemfile:
