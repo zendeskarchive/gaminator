@@ -61,13 +61,14 @@ module Gaminator
       begin
         loop do
           tick_game
-          handle_input
 
           render_objects
           render_textbox
 
           @plane.refresh
           @textbox.refresh
+
+          handle_input
 
           clear_plane
           clear_textbox
@@ -85,11 +86,11 @@ module Gaminator
 
     def handle_input
       if @game.wait?
-        Curses.timeout = -1
+        @textbox.timeout = -1
       else
-        Curses.timeout = 0
+        @textbox.timeout = 0
       end
-      char = getch
+      char = @textbox.getch
       action = @game.input_map[char]
       if action && @game.respond_to?(action)
         @game.send(action)
