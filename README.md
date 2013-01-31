@@ -24,6 +24,7 @@ following methods:
 * tick - the method that is called for every loop cycle
 * exit_message - the message displayed when the game is finished
 * textbox_content - the message displayed at the bottom of the game window
+* wait? - determine whether to wait for input before next tick
 * sleep_time - the time interval beteen two event loop cycles
 
 The objects that are displayed on the screen have to implement the following
