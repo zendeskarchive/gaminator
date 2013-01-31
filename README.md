@@ -2,6 +2,8 @@
 
 A simple wrapper around Curses intended for writing ASCII games
 
+Post game submissions here: https://gist.github.com/4684252
+
 ## Usage
 
 The Gaminator::Runner class implements the base methods used to
