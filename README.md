@@ -42,17 +42,23 @@ interface:
 
 You have to define either char or texture method on each object.
 
-Available colors:
+Every color-capable terminal will support at least the 8 basic ANSI colors:
 
 ```
-Curses::COLOR_WHITE
-Curses::COLOR_RED
-Curses::COLOR_BLUE
-Curses::COLOR_GREEN
-Curses::COLOR_CYAN
-Curses::COLOR_MAGENTA
-Curses::COLOR_YELLOW
+Curses::COLOR_BLACK = 0
+Curses::COLOR_RED = 1
+Curses::COLOR_GREEN = 2
+Curses::COLOR_YELLOW = 3
+Curses::COLOR_BLUE = 4
+Curses::COLOR_MAGENTA = 5
+Curses::COLOR_CYAN = 6
+Curses::COLOR_WHITE = 7
 ```
+
+If available, gaminator initializes color pairs for the remaining additional
+colors (up to 256 total) so you can literally puke 8-bit rainbows. These
+color pairs are assigned the numbers 8-255, without any fancy constants defined
+for them. Could YOU name 256 colors? 
 
 ## Installation
 
