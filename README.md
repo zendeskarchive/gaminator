@@ -64,7 +64,7 @@ for them. Could YOU name 256 colors?
 
 Add this line to your application's Gemfile:
 
-    gem "gaminator", :git => "git://github.com/futuresimple/gaminator.git"
+    gem "gaminator"
 
 Execute:
 
