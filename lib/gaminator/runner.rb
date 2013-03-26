@@ -25,6 +25,12 @@ module Gaminator
         init_pair(color, color, COLOR_BLACK)
       end
 
+      if colors > 8
+        (8..colors-1).each do |color|
+          init_pair(color, color, COLOR_BLACK)
+        end
+      end
+
       @plane_width = cols
       @plane_height = lines - 5
       @plane = Window.new(@plane_height, @plane_width, 0, 0)
